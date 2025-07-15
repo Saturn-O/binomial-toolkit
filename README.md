@@ -54,7 +54,7 @@ Encapsulates all behavior of a binomial distribution, making it ideal for calcul
 
 - `cumulative(k)`
   Calculates:
-  P(X ≤ k) = ∑ (i = 0 to k) P(X = i)
+  P(X ≤ k) = ∑ P(X = i) for i = 0 to k
 
 - `cumulative_range(k_1, k_2)`
   Calculates:
