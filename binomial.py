@@ -264,9 +264,8 @@ class Binomial:
         return f"Binomial experiment: n = {self.num_trails}, p = {self.prob_success:.2f}, q = {self.prob_failure:.2f}"
 
 
-def main():
-    # This main function is an example on how to use this module
-    print()
+if __name__ == "__main__":
+    # Usage:
     # Creating a new binomial distribution object with n = 5, p = 0.5
     binomial = Binomial(5, 0.5)
 
@@ -311,8 +310,3 @@ def main():
     # You can use this dict to  extract probability values, which is the same as using the probability_k method
     print("Probability of exactly 2 successes is", b2.distribution[2])
     print("Probability of exactly 2 successes is", b2.probability_k(2))
-    combinations(4, 2)
-
-
-if __name__ == "__main__":
-    main()
