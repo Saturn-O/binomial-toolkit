@@ -16,15 +16,11 @@ It was developed as the final project for CS50's Introduction to Programming wit
 
 - `factorial(n)`
   Calculates the factorial of a non-negative integer $n$ using recursion:
-  $$
-  n! = n \cdot (n - 1) \cdot (n - 2) \cdots 1
-  $$
+  n! = n × (n - 1) × (n - 2) × ... × 1
 
 - `combinations(n, r)`
   Computes the number of r-combinations from a set of $n$ elements using:
-  $$
-  C(n, r) = \frac{n!}{r! \cdot (n - r)!}
-  $$
+  C(n, r) = n! / [r! × (n - r)!]
 
 - `validate_non_negative_integer(n)`
   Validates that a given input is a non-negative integer. Raises `TypeError` or `ValueError`.
@@ -45,39 +41,28 @@ Encapsulates all behavior of a binomial distribution, making it ideal for calcul
 
 ### Statistical Properties
 - **Expected value**:
-  $$
-  \mu = n \cdot p
-  $$
+  μ = n × p
 - **Variance**:
-  $$
-  \sigma^2 = n \cdot p \cdot q
-  $$
+  σ² = n × p × q
 - **Skewness**:
-  $$
-  \gamma_1 = \frac{q - p}{\sqrt{n \cdot p \cdot q}}
-  $$
+  γ₁ = (q - p) / √(n × p × q)
 
 ### Methods
 - `probability_k(k)`
   Computes the probability of getting exactly $k$ successes:
-  $$
-  P(X = k) = C(n, k) \cdot p^k \cdot (1 - p)^{n - k}
-  $$
+  P(X = k) = C(n, k) × p^k × (1 - p)^(n - k)
 
 - `cumulative(k)`
   Calculates:
-  $$
-  P(X \leq k) = \sum_{i = 0}^{k} P(X = i)
-  $$
+  P(X ≤ k) = ∑ (i = 0 to k) P(X = i)
 
 - `cumulative_range(k_1, k_2)`
   Calculates:
-  $$
-  P(k_1 \leq X \leq k_2) = \sum_{i = k_1}^{k_2} P(X = i)
-  $$
+  P(k₁ ≤ X ≤ k₂) = ∑ P(X = i) for i = k₁ to k₂
 
 - `distribution`
-  Returns the full probability mass function as a dictionary.
+  Returns a dictionary representing the full probability mass function, where each key is an integer k (number of successes) and its value is P(X = k).  
+  Example output: {0: 0.017, 1: 0.119, ..., n: 0.003}
 
 ---
 
