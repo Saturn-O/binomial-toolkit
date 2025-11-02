@@ -1,4 +1,4 @@
-# Binomial Probability Toolkit
+# Binomial Distribution Toolkit
 
 #### Video Demo: <https://youtu.be/z7zEe-mF6iA>
 
